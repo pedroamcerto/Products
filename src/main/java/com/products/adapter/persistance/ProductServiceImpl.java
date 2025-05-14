@@ -4,12 +4,20 @@ import com.products.application.usecases.ProductService;
 import com.products.domain.Product;
 
 public class ProductServiceImpl implements ProductService {
-    @Override
-    public void createProduct(String id, Product product) {
 
+    private final ProductRepository productRepository;
+
+    public ProductServiceImpl(ProductRepository productRepository) {
+        this.productRepository = productRepository;
     }
 
-    public void updatePrice(String id, Double price) {
+    @Override
+    public void createProduct(String id,Product product) {
+        productRepository.save(id, product);
+    }
 
+    @Override
+    public void updatePrice(String id, Double price) {
+        productRepository.updatePrice(id, price);
     }
 }
