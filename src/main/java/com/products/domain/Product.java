@@ -1,11 +1,13 @@
 package com.products.domain;
 
 public class Product {
+    private String id;
     private String name;
     private String code;
     private Double price;
 
-    public Product(String name, String code, Double price) {
+    public Product(String id, String name, String code, Double price) {
+        this.id = id;
         this.name = name;
         this.code = code;
         this.price = price;
