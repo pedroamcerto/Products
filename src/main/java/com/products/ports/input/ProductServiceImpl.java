@@ -1,4 +1,4 @@
-package com.products.adapter.persistance;
+package com.products.ports.input;
 
 import com.products.application.usecases.ProductService;
 import com.products.domain.Product;
